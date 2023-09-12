@@ -37,7 +37,7 @@ public class DeckOfCardsTest {
       for (int i = 0; i < count; i++) {
          System.out.printf("%s | ", playerCards[i]);
       }
-      int soma = baralho.ValueCard(playerCards, count); // Corrige a chamada do método
+      int soma = baralho.ValueCard(playerCards, count, 0); // Corrige a chamada do método
       System.out.printf("%nSoma das cartas: %d%n", soma); // Corrige a formatação da saída
       System.out.println(); // Para criar uma nova linha após a impressão das cartas
 
@@ -72,7 +72,7 @@ public class DeckOfCardsTest {
       for (int i = count; i < count2 + 2; i++) {
          System.out.printf("%s | ", playerCards2[i]);
       }
-      int soma2 = baralho.ValueCard(playerCards2, count2); // Corrige a chamada do método
+      int soma2 = baralho.ValueCard(playerCards2, count, count2); // Corrige a chamada do método
       System.out.printf("%nSoma das cartas: %d%n", soma2); // Corrige a formatação da saída
       System.out.println(); // Para criar uma nova linha após a impressão das cartas
 

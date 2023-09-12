@@ -53,47 +53,90 @@ public class DeckOfCards {
             return null; // return null to indicate that all Cards were dealt
     }
 
-    public int ValueCard(Card cartas[], int count) { // fun;ão que retorna o valor da soma das cartas do usuário
+    public int ValueCard(Card cartas[], int count, int count2) { // fun;ão que retorna o valor da soma das cartas do
+                                                                 // usuário
         int soma = 0;
-
-        for (int currentCard = 0; currentCard < count; currentCard++) {
-            switch (cartas[currentCard].getFace()) {
-                case "Ás":
-                    soma += 1;
-                    break;
-                case "Dois":
-                    soma += 2;
-                    break;
-                case "Três":
-                    soma += 3;
-                    break;
-                case "Quatro":
-                    soma += 4;
-                    break;
-                case "Cinco":
-                    soma += 5;
-                    break;
-                case "Seis":
-                    soma += 6;
-                    break;
-                case "Sete":
-                    soma += 7;
-                    break;
-                case "Oito":
-                    soma += 8;
-                    break;
-                case "Nove":
-                    soma += 9;
-                    break;
-                case "Dez":
-                case "Valete":
-                case "Dama":
-                case "Rei":
-                    soma += 10;
-                    break;
-                default:
-                    soma += 0;
-                    break;
+        if (count2 == 0) {
+            for (int currentCard = 0; currentCard < count; currentCard++) {
+                switch (cartas[currentCard].getFace()) {
+                    case "Ás":
+                        soma += 1;
+                        break;
+                    case "Dois":
+                        soma += 2;
+                        break;
+                    case "Três":
+                        soma += 3;
+                        break;
+                    case "Quatro":
+                        soma += 4;
+                        break;
+                    case "Cinco":
+                        soma += 5;
+                        break;
+                    case "Seis":
+                        soma += 6;
+                        break;
+                    case "Sete":
+                        soma += 7;
+                        break;
+                    case "Oito":
+                        soma += 8;
+                        break;
+                    case "Nove":
+                        soma += 9;
+                        break;
+                    case "Dez":
+                    case "Valete":
+                    case "Dama":
+                    case "Rei":
+                        soma += 10;
+                        break;
+                    default:
+                        soma += 0;
+                        break;
+                }
+            }
+        } else {
+            for (currentCard = count; currentCard < count2 + 2; currentCard++) {
+                switch (cartas[currentCard].getFace()) {
+                    case "Ás":
+                        soma += 1;
+                        break;
+                    case "Dois":
+                        soma += 2;
+                        break;
+                    case "Três":
+                        soma += 3;
+                        break;
+                    case "Quatro":
+                        soma += 4;
+                        break;
+                    case "Cinco":
+                        soma += 5;
+                        break;
+                    case "Seis":
+                        soma += 6;
+                        break;
+                    case "Sete":
+                        soma += 7;
+                        break;
+                    case "Oito":
+                        soma += 8;
+                        break;
+                    case "Nove":
+                        soma += 9;
+                        break;
+                    case "Dez":
+                    case "Valete":
+                    case "Dama":
+                    case "Rei":
+                        soma += 10;
+                        break;
+                    default:
+                        soma += 0;
+                        break;
+                }
             }
         }
         return soma;
