@@ -53,7 +53,7 @@ public class DeckOfCards {
             return null; // return null to indicate that all Cards were dealt
     }
 
-    public int ValueCard(Card cartas[], int count) {
+    public int ValueCard(Card cartas[], int count) { // fun;ão que retorna o valor da soma das cartas do usuário
         int soma = 0;
 
         for (int currentCard = 0; currentCard < count; currentCard++) {
