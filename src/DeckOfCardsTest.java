@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class DeckOfCardsTest {
    // execute application
    public static void main(String[] args) {
-
+      
       clearConsole();
       Scanner input = new Scanner(System.in); // criando um input para as entradas
       int count = 2; // numero de cartas distribuidas inicialmente
-      int numPlayers = 0;
-      int verificaMaisDeUmVencedor = 0;
+      int numPlayers = 0; // iniciando o numero de jogadores inicialmente com 0
+      int verificaMaisDeUmVencedor = 0; // variavel para verificar de houve empate
 
       System.out.println("          [------------]    Seja bem vindo ao BLACKJACK    [------------]");
       System.out.println(" -> O 'ás' vale 1 ou 11 pontos (dependendo o que é mais conveniente para o jogador);");
@@ -46,15 +46,16 @@ public class DeckOfCardsTest {
       }
 
       
-
       if (jogadorVencedor != -1 && verificaMaisDeUmVencedor == 1) {
          System.out.printf("Jogador %d venceu com %d pontos!%n", jogadorVencedor + 1, maiorPontuacao);
-      } 
-      if(jogadorVencedor != -1 && verificaMaisDeUmVencedor > 1){
+      } else if(jogadorVencedor != -1 && verificaMaisDeUmVencedor > 1){
          System.out.printf("Ocorreu um empate!!%n");
+      } else{
+         System.out.printf("Não houve nenhum vencedor!!%n");
       }
       System.out.println();
       input.close();
+
    }
    
    public static int getIntInput(Scanner input, String prompt) {
@@ -138,7 +139,7 @@ public class DeckOfCardsTest {
          }
       } while (verificadorsim != 0);
 
-      return soma; // Retorne o array de cartas do jogador
+      return soma; // Retorne o resultado do jogo (do jogador)
       
    }
 }

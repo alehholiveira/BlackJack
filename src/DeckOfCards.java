@@ -56,10 +56,12 @@ public class DeckOfCards {
     public int ValueCard(Card cartas[], int count) { // fun;ão que retorna o valor da soma das cartas do
                                                                  // usuário
         int soma = 0;
+        int numAses = 0; // Variável para rastrear o número de Áses
             for (int currentCard = 0; currentCard < count; currentCard++) {
                 switch (cartas[currentCard].getFace()) {
                     case "Ás":
-                        soma += 1;
+                        soma += 11; // Assume que o Ás vale 11 inicialmente
+                        numAses++; // Acompanha o número de Áses na mão
                         break;
                     case "Dois":
                         soma += 2;
@@ -96,6 +98,12 @@ public class DeckOfCards {
                         break;
                 }
             }
+
+        // Agora, ajusta o valor dos Áses conforme necessário
+        while (numAses > 0 && soma > 21) {
+            soma -= 10; // Subtrai 10 pontos de um dos Áses (muda de 11 para 1 ponto)
+            numAses--; // Reduz o número de Áses a serem ajustados
+        }
        
         return soma;
     }
