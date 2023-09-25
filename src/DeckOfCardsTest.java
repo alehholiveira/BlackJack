@@ -47,13 +47,11 @@ public class DeckOfCardsTest {
 
       
 
-      if (jogadorVencedor != -1 && verificaMaisDeUmVencedor == 0) {
+      if (jogadorVencedor != -1 && verificaMaisDeUmVencedor == 1) {
          System.out.printf("Jogador %d venceu com %d pontos!%n", jogadorVencedor + 1, maiorPontuacao);
       } 
-      if(jogadorVencedor != -1 && verificaMaisDeUmVencedor != 0){
+      if(jogadorVencedor != -1 && verificaMaisDeUmVencedor > 1){
          System.out.printf("Ocorreu um empate!!%n");
-      }else {
-         System.out.println("Nenhum jogador venceu. Todos estouraram o limite.");
       }
       System.out.println();
       input.close();
