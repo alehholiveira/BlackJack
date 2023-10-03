@@ -16,4 +16,4 @@ As cartas têm os seguintes valores:
 
 Para desenvolver este jogo, utilizamos como base os arquivos contidos no arquivo `Card.zip`.
 
-Vamos jogar Blackjack! Boa sorte! 🃏🎉
+Vamos jogar Blackjack! Boa sorte!! 🃏🎉
